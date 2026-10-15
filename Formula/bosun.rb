@@ -5,13 +5,13 @@
 class Bosun < Formula
   desc "Personal agent that acts only through integrations you've granted"
   homepage "https://github.com/perishabledave/bosun"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/perishabledave/bosun/releases/download/v0.1.0/bosun_darwin_amd64.tar.gz"
-      sha256 "5ae2fbbd993f9a35b45ac48481b8122ae661b5dedad7aee8b7c30c5ec398bcf3"
+      url "https://github.com/perishabledave/bosun/releases/download/v0.2.0/bosun_darwin_amd64.tar.gz"
+      sha256 "2286af5b2f5f577a91807cbd2d263c6139a65eb11b4ac8a5cf5e6e6588b355c6"
 
       define_method(:install) do
         bin.install "bosund"
@@ -19,8 +19,8 @@ class Bosun < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/perishabledave/bosun/releases/download/v0.1.0/bosun_darwin_arm64.tar.gz"
-      sha256 "704ce3a3b46aba37bcfe5ecbe2f503ca4b62b19f6ce94ca37788a0fe81cbf2b0"
+      url "https://github.com/perishabledave/bosun/releases/download/v0.2.0/bosun_darwin_arm64.tar.gz"
+      sha256 "fef32b8f0bd75438e873bac7deec6933b0e538e2c10409f64406de159df750f9"
 
       define_method(:install) do
         bin.install "bosund"
@@ -31,16 +31,16 @@ class Bosun < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/perishabledave/bosun/releases/download/v0.1.0/bosun_linux_amd64.tar.gz"
-      sha256 "2ee4ccb0780d69b59e619277e966d67a3e5c127fe403c45ba09edb543889f074"
+      url "https://github.com/perishabledave/bosun/releases/download/v0.2.0/bosun_linux_amd64.tar.gz"
+      sha256 "dde32b9b0521108d061f3444d7c2da51bb26ea3905d937dac9ad7bb527b6c2c9"
       define_method(:install) do
         bin.install "bosund"
         bin.install "bosun"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/perishabledave/bosun/releases/download/v0.1.0/bosun_linux_arm64.tar.gz"
-      sha256 "54cafaa1808ec2dd96b17980810ea397b593ecca98d63aef8f73594dfda64818"
+      url "https://github.com/perishabledave/bosun/releases/download/v0.2.0/bosun_linux_arm64.tar.gz"
+      sha256 "1a1f6d379b51c8d1daf85c716940ac702dd0665d28d373cbf9d51f510882a1da"
       define_method(:install) do
         bin.install "bosund"
         bin.install "bosun"
